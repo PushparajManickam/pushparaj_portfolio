@@ -60,7 +60,7 @@ class ProjectsSectionWidget extends StatelessWidget {
                   crossAxisCount: crossAxisCount,
                   mainAxisSpacing: 24,
                   crossAxisSpacing: 24,
-                  childAspectRatio: isMobile ? 1.2 : 0.8,
+                  childAspectRatio: isMobile ? 1.0 : 0.8,
                 ),
                 itemCount: projects.length,
                 itemBuilder: (context, index) {
@@ -93,6 +93,7 @@ class ProjectsSectionWidget extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           // Project image
           ClipRRect(
@@ -136,20 +137,20 @@ class ProjectsSectionWidget extends StatelessWidget {
                   const SizedBox(height: 8),
 
                   // Project description
-                  Expanded(
-                    child: Text(
-                      project.description,
-                      style: GoogleFonts.poppins(
-                        fontSize: 14,
-                        height: 1.5,
-                        color: Theme.of(
-                          context,
-                        ).textTheme.bodyMedium?.color?.withOpacity(0.8),
-                      ),
-                    ),
-                  ),
+                  // Expanded(
+                  //   child: Text(
+                  //     project.description,
+                  //     style: GoogleFonts.poppins(
+                  //       fontSize: 14,
+                  //       height: 1.5,
+                  //       color: Theme.of(
+                  //         context,
+                  //       ).textTheme.bodyMedium?.color?.withOpacity(0.8),
+                  //     ),
+                  //   ),
+                  // ),
 
-                  const SizedBox(height: 16),
+                  // const SizedBox(height: 16),
 
                   // Technologies
                   if (project.technologies.isNotEmpty)
