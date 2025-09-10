@@ -30,7 +30,7 @@ jobs:
       run: flutter test
       
     - name: Build web app
-      run: flutter build web --release --web-renderer html
+      run: flutter build web --release
       
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
