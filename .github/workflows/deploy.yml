@@ -53,10 +53,7 @@ jobs:
         with:
           script: |
             const prNumber = context.payload.pull_request.number;
-            const comment = `🚀 **Build successful!**
-
-📦 Build artifacts are available for download.
-🔍 You can download the build artifacts from the Actions tab to test locally.`;
+            const comment = '🚀 **Build successful!**\n\n📦 Build artifacts are available for download.\n🔍 You can download the build artifacts from the Actions tab to test locally.';
 
             github.rest.issues.createComment({
               issue_number: prNumber,
