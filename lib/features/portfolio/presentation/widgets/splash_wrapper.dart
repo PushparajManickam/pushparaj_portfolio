@@ -15,7 +15,7 @@ class SplashWrapper extends StatelessWidget {
           return const LoadingAnimationWidget();
         } else if (splashProvider.showMainApp) {
           return AnimatedSwitcher(
-            duration: const Duration(milliseconds: 100),
+            duration: const Duration(milliseconds:300),
             transitionBuilder: (Widget child, Animation<double> animation) {
               return FadeTransition(
                 opacity: animation,
@@ -40,7 +40,7 @@ class SplashWrapper extends StatelessWidget {
           // Transition state - show a brief fade out of loading
           return AnimatedOpacity(
             opacity: 0.0,
-            duration: const Duration(milliseconds: 500),
+            duration: const Duration(milliseconds: 300),
             child: const LoadingAnimationWidget(),
           );
         }

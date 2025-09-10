@@ -100,7 +100,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
                       if (portfolioProvider.awards.isNotEmpty)
                         ScrollAnimationWidget(
                           uniqueKey: 'awards_section',
-                          delay: const Duration(milliseconds: 700),
+                          delay: const Duration(milliseconds: 600),
                           child: AwardsSectionWidget(
                             awards: portfolioProvider.awards,
                           ),
@@ -110,7 +110,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
                       if (portfolioProvider.personalInfo != null)
                         ScrollAnimationWidget(
                           uniqueKey: 'contact_section',
-                          delay: const Duration(milliseconds: 900),
+                          delay: const Duration(milliseconds: 600),
                           child: ContactSectionWidget(
                             personalInfo: portfolioProvider.personalInfo!,
                           ),

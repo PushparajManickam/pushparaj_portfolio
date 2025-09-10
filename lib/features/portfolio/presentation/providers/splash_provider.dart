@@ -13,13 +13,13 @@ class SplashProvider extends ChangeNotifier {
 
   void _initializeSplash() async {
     // Simulate loading time for a better user experience
-    await Future.delayed(const Duration(milliseconds: 3000));
+    await Future.delayed(const Duration(milliseconds: 2000));
 
     _isLoading = false;
     notifyListeners();
 
     // Small delay before showing main app for smooth transition
-    await Future.delayed(const Duration(milliseconds: 500));
+    // await Future.delayed(const Duration(milliseconds: 100));
 
     _showMainApp = true;
     notifyListeners();
