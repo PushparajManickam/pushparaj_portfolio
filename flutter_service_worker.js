@@ -14,7 +14,7 @@ const RESOURCES = {"canvaskit/skwasm.js": "ac0f73826b925320a1e9b0d3fd7da61c",
 "canvaskit/skwasm.js.symbols": "96263e00e3c9bd9cd878ead867c04f3c",
 "canvaskit/canvaskit.wasm": "e7602c687313cfac5f495c5eac2fb324",
 "flutter.js": "4b2350e14c6650ba82871f60906437ea",
-"manifest.json": "9fcdbfcbf7f8e0ea99148d78bfd40b91",
+"manifest.json": "4c780768b2fb8f1e8f27d35d6db00b86",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
@@ -34,10 +34,11 @@ const RESOURCES = {"canvaskit/skwasm.js": "ac0f73826b925320a1e9b0d3fd7da61c",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "d65260d252263acb044b12c65787f9fd",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "0ca2ad3477a782fb81702de4a12e44e5",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "0b045e1053e63b59fcdc599ed8a2b086",
-"flutter_bootstrap.js": "81ba9a2590e343ecf26c45147a44f578",
+"flutter_bootstrap.js": "e12a250bfc6c9d0c176b8c75d714a138",
 "favicon.png": "623af0282f6bf3c05e3819eaca60a09e",
-"index.html": "606fc2dcadd96d628d32dbff962a30cd",
-"/": "606fc2dcadd96d628d32dbff962a30cd"};
+"index.html": "50b16ae13de573ee19531af1d5018e72",
+"/": "50b16ae13de573ee19531af1d5018e72",
+"app_logo.png": "623af0282f6bf3c05e3819eaca60a09e"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
