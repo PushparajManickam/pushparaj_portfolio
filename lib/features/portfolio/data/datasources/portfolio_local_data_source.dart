@@ -19,7 +19,7 @@ class PortfolioLocalDataSourceImpl implements PortfolioLocalDataSource {
       title: 'Flutter Developer',
       description:
           'Passionate Flutter developer with 4+ years of experience building production-ready mobile applications. Specialized in fintech, e-commerce, and real-time solutions.',
-      email: 'pushparaj2709@gmail.com',
+      email: 'pushparaj27091998@gmail.com',
       phone: '+91 88836 43437',
       location: 'Tamil Nadu, India',
       profileImageUrl:

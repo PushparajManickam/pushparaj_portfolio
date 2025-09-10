@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -75,6 +76,7 @@ class ProjectsSectionWidget extends StatelessWidget {
 
   Widget _buildProjectCard(BuildContext context, Project project) {
     return Container(
+      padding: EdgeInsets.all(6.0),
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(16),
@@ -96,13 +98,14 @@ class ProjectsSectionWidget extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
             child: Container(
-              height: 200,
+              height: 100,
               width: double.infinity,
+              margin: EdgeInsets.all(6.0,),
               child: project.imageUrl != null
                   ? Image.asset(
                       project.imageUrl!,
                       width: double.infinity,
-                      height: 200,
+                      height: 100,
                       fit: BoxFit.contain,
                       errorBuilder: (context, error, stackTrace) {
                         return _buildPlaceholderImage(context);
@@ -272,7 +275,22 @@ class ProjectsSectionWidget extends StatelessWidget {
   Future<void> _launchUrl(String url) async {
     final Uri uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+      await launchUrl(
+        uri,
+        mode: LaunchMode.platformDefault,
+        webViewConfiguration: const WebViewConfiguration(
+          enableJavaScript: true,
+          enableDomStorage: true,
+        ),
+      );
+    } else {
+      // Fallback: try to launch with different mode
+      try {
+        await launchUrl(uri, mode: LaunchMode.inAppWebView);
+      } catch (e) {
+        // If all else fails, show error or copy to clipboard
+        debugPrint('Could not launch $url: $e');
+      }
     }
   }
 }
